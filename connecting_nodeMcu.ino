@@ -1,13 +1,13 @@
 #include <ESP8266WiFi.h>
-char ssid[] = "ESP8266";           // SSID of your home WiFi
-char pass[] = "ESP8266Test";            // password of your home WiFi
+char ssid[] = "ESP8266";           // SSID of your hotspot 
+char pass[] = "ESP8266Test";            // password of your hotspot
 
 IPAddress server(192,168,0,80);       // the fix IP address of the server
 WiFiClient client;
 
 void setup() {
   // put your setup code here, to run once:
-Serial.begin(115200);               // only for debug
+  Serial.begin(115200);               // only for debug
   WiFi.begin(ssid, pass);             // connects to the WiFi router
   while (WiFi.status() != WL_CONNECTED) {
     Serial.print(".");
